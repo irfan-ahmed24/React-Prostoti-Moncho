@@ -1,0 +1,5 @@
+@font-face {
+    font-family: Galada-Regular;
+    src: url("/src/assets/fonts/Galada-Regular.ttf");
+}
+@import "tailwindcss";
