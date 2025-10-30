@@ -31,7 +31,7 @@ function MobileNav() {
           <NavLink
             to={"/Login"}
             className={
-              "bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-full font-medium"
+              "bg-blue-700 gradient-bg opacity-70 text-white px-4 py-2 rounded-full font-medium"
             }
           >
             সাইন ইন

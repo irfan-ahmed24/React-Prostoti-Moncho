@@ -3,3 +3,12 @@
     src: url("/src/assets/fonts/Galada-Regular.ttf");
 }
 @import "tailwindcss";
+.font-galada{
+     font-family: Galada-Regular;
+}
+.gradient-bg{
+   background: linear-gradient(to left,red,blue)
+}
+.gradient-bg:hover{
+  background: linear-gradient(to right, red,blue)
+}

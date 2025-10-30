@@ -23,14 +23,11 @@ export default function DesktopSideBar({ onIsClick }) {
     >
       <div className="p-5 flex justify-between">
         <h1>
-          <a
-            href="#"
-            className="galada-regular font-extrabold italic text-black"
-          >
-            <span class="text-xl text-red-700">প্র</span>
-            <span class=" text-blue-700 text-lg">স্তুতি </span>
-            <span class="text-lg text-red-500">ম</span>
-            <span className="text-sm">ঞ্চ</span>
+          <a href="#" className="font-galada text-black">
+            <span class="text-2xl text-red-700">প্র</span>
+            <span class=" text-blue-700 text-xl">স্তুতি </span>
+            <span class="text-xl text-red-500">ম</span>
+            <span className="text-md">ঞ্চ</span>
           </a>
         </h1>
         <div className="text-xl">
