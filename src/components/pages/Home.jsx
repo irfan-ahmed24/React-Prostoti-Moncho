@@ -1,6 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+//import react icon
+import { FaHome, FaGraduationCap } from "react-icons/fa";
+import { BsPencilSquare } from "react-icons/bs";
+import { GrTest } from "react-icons/gr";
+import { BsFillTrophyFill } from "react-icons/bs";
+import { HiMiniUserGroup } from "react-icons/hi2";
+
 export default function Home() {
   return (
     <div className="p-5">
@@ -28,38 +35,66 @@ export default function Home() {
         </div>
       </div>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-        <div className="bg-white rounded-lg shadow p-4">
+        <div className="bg-white rounded-lg shadow p-5">
           <div className="text-center">
-            <h1>পড়াশোনা</h1>
-            <p>আপনার অ্যাকাডেমিক সাবজেক্ট খুঁজুন এবং এখান থেকে পড়ুন।</p>
+            <div className="flex justify-center">
+              <FaGraduationCap className="text-4xl text-pink-700" />
+            </div>
+            <h1 className="text-xl font-semibold mt-2">পড়াশোনা</h1>
+            <p className="text-sm mt-2 opacity-80">
+              আপনার অ্যাকাডেমিক সাবজেক্ট খুঁজুন এবং এখান থেকে পড়ুন।
+            </p>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-4">
-          <div>
-            <h1>পরীক্ষা</h1>
-            <p>প্রতিটি অধ্যায় শেষ করার পর নিজেকে বিচার করো।</p>
+        <div className="bg-white rounded-lg shadow p-5">
+          <div className="text-center">
+            <div className="flex justify-center">
+              <BsPencilSquare className="text-4xl text-red-700" />
+            </div>
+
+            <h1 className="text-xl font-semibold mt-2">পরীক্ষা</h1>
+            <p className="text-sm mt-2 opacity-80">
+              প্রতিটি অধ্যায় শেষ করার পর নিজেকে বিচার করো।
+            </p>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-4">
-          <div>
-            <h1>দ্রুত প্র্যাকটিস</h1>
-            <p>নিয়মিত অনুশীলনে দক্ষতা বাড়ান সহজেই।</p>
+        <div className="bg-white rounded-lg shadow p-5">
+          <div className="text-center">
+            <div className="flex justify-center">
+              <GrTest className="text-4xl text-blue-700" />
+            </div>
+
+            <h1 className="text-xl font-semibold mt-2">দ্রুত প্র্যাকটিস</h1>
+            <p className="text-sm mt-2 opacity-80">
+              নিয়মিত অনুশীলনে দক্ষতা বাড়ান সহজেই।
+            </p>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-4">
-          <div>
-            <h1>লিডারবোর্ড</h1>
-            <p>আপনার অগ্রগতি দেখুন ও অন্যদের সাথে প্রতিযোগিতা করুন।</p>
+        <div className="bg-white rounded-lg shadow p-5">
+          <div className="text-center">
+            <div className="flex justify-center">
+              <BsFillTrophyFill className="text-4xl text-yellow-500" />
+            </div>
+
+            <h1 className="text-xl font-semibold mt-2">লিডারবোর্ড</h1>
+            <p className="text-sm mt-2 opacity-80">
+              আপনার অগ্রগতি দেখুন ও অন্যদের সাথে প্রতিযোগিতা করুন।
+            </p>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-4">
-          <div>
-            <h1>কমিউনিটি</h1>
-            <p>সহযোগিতামূলক পরিবেশে শিখুন ও শেয়ার করুন।</p>
+        <div className="bg-white rounded-lg shadow p-5">
+          <div className="text-center">
+            <div className="flex justify-center">
+              <HiMiniUserGroup className="text-4xl text-blue-700" />
+            </div>
+            <h1 className="text-xl font-semibold mt-2">কমিউনিটি</h1>
+            <p className="text-sm mt-2 opacity-80">
+              সহযোগিতামূলক পরিবেশে শিখুন ও শেয়ার করুন।
+            </p>
           </div>
         </div>
       </div>
