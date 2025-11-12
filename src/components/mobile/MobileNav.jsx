@@ -10,7 +10,7 @@ function MobileNav() {
   return (
     <>
       <MobileSideBar open={isOpen} />
-      <div className="fixed flex shadow-md justify-between items-center py-3 px-5 top-0 bg-white w-full lg:hidden">
+      <div className="fixed flex shadow-md justify-between items-center py-3 z-30 px-5 top-0 bg-white w-full lg:hidden">
         <div className="text-2xl" onClick={() => setIsOpen(!isOpen)}>
           <IoMenu />
         </div>
