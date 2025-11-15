@@ -1,3 +1,6 @@
-import { createContext } from "react";
+import React, { createContext } from "react";
 
-export const darkContext = createContext();
+export const DarkContext = createContext({
+  isDark: false,
+  handleIsDark: () => {},
+});

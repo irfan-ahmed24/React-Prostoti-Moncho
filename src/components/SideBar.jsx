@@ -81,7 +81,7 @@ function SideBar({ open }) {
           </div>
 
           <div className="w-full relative my-2 pl-6">
-            <button className="bg-gray-500 border-2 border-blue-950 w-16 p-0.5 rounded-2xl shadow-md shadow-black">
+            <button className="bg-amber-50 border-2 border-blue-950 w-16 p-0.5 rounded-2xl shadow-md shadow-black">
               <MdOutlineDarkMode className="bg-blue-950 p-0.5 text-2xl rounded-2xl text-white font-bold shadow shadow-white" />
             </button>
           </div>

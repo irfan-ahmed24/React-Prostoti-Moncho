@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-
+import { DarkContext } from "../USE_CONTEXT_HOOkS/UserContext";
 //react icon import
 import { FaHome, FaGraduationCap } from "react-icons/fa";
 import { BsPencilSquare } from "react-icons/bs";
@@ -11,8 +11,12 @@ import { FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";
 import { MdOutlineDarkMode } from "react-icons/md";
 
 //component import
-
 export default function DesktopSideBar({ onIsClick }) {
+  const { isDark, setIsDark } = useContext(DarkContext);
+  const handleIsDark = () => {
+    setIsDark((isDark) => !isDark);
+    console.log(isDark);
+  };
   const [isClicked, setisClicked] = useState(false);
   onIsClick(isClicked);
   return (
@@ -103,7 +107,10 @@ export default function DesktopSideBar({ onIsClick }) {
           </div>
 
           <div className="w-full relative my-2 pl-6">
-            <button className="bg-gray-500 border-2 border-blue-950 w-16 p-0.5 rounded-2xl shadow-md shadow-black">
+            <button
+              onClick={handleIsDark}
+              className="bg-amber-50 border-2 border-blue-950 w-16 p-0.5 rounded-2xl shadow-md shadow-black"
+            >
               <MdOutlineDarkMode className="bg-blue-950 p-0.5 text-2xl rounded-2xl text-white font-bold shadow shadow-white" />
             </button>
           </div>
