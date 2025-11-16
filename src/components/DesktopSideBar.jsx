@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { DarkContext } from "../USE_CONTEXT_HOOkS/UserContext";
+import { DarkContext } from "../USE_CONTEXT_HOOkS/DarkContext";
 //react icon import
 import { FaHome, FaGraduationCap } from "react-icons/fa";
 import { BsPencilSquare } from "react-icons/bs";
@@ -12,18 +12,19 @@ import { MdOutlineDarkMode } from "react-icons/md";
 
 //component import
 export default function DesktopSideBar({ onIsClick }) {
-  const { isDark, setIsDark } = useContext(DarkContext);
+  const { theme, setTheme } = useContext(DarkContext);
+  const isDark = theme === "dark" ? true : false;
   const handleIsDark = () => {
-    setIsDark((isDark) => !isDark);
-    console.log(isDark);
+    setTheme((theme) => (theme === "dark" ? "light" : "dark"));
   };
+
   const [isClicked, setisClicked] = useState(false);
   onIsClick(isClicked);
   return (
     <div
       id="sideBar"
-      className={`fixed hidden shadow-xl rounded-r bg-white lg:block lg:w-65 h-screen transition-all duration-200 ${
-        isClicked ? "-translate-x-24" : "-translate-x-0"
+      className={`fixed hidden shadow-xl rounded-r bg-white dark:bg-[#021330] lg:block lg:w-65 h-screen transition-all duration-200 ${
+        isClicked ? "-translate-x-46" : "-translate-x-0"
       }`}
     >
       <div className="p-5 flex justify-between">
@@ -109,9 +110,13 @@ export default function DesktopSideBar({ onIsClick }) {
           <div className="w-full relative my-2 pl-6">
             <button
               onClick={handleIsDark}
-              className="bg-amber-50 border-2 border-blue-950 w-16 p-0.5 rounded-2xl shadow-md shadow-black"
+              className={`bg-amber-50 dark:bg-black border-2 border-blue-950 w-14 p-0.5 rounded-2xl shadow-md shadow-black`}
             >
-              <MdOutlineDarkMode className="bg-blue-950 p-0.5 text-2xl rounded-2xl text-white font-bold shadow shadow-white" />
+              <MdOutlineDarkMode
+                className={`bg-blue-950 p-0.5 text-2xl rounded-2xl text-white font-bold shadow shadow-white ${
+                  isDark ? "translate-x-full" : "translatex-0"
+                } transition-all duration-200`}
+              />
             </button>
           </div>
         </div>

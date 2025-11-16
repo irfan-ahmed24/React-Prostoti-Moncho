@@ -3,6 +3,7 @@
     src: url("/src/assets/fonts/Galada-Regular.ttf");
 }
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 .font-galada{
      font-family: Galada-Regular;
 }
