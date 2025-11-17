@@ -28,7 +28,7 @@ function App() {
             <nav>
               <DesktopSideBar onIsClick={handleIsClick} />
             </nav>
-            <main className="bg-slate-100 dark:bg-[#060F1D] min-h-screen mt-10 lg:mt-0 transition-all duration-200">
+            <main className="bg-slate-100 dark:bg-[#1c1c31] min-h-screen mt-10 lg:mt-0 transition-all duration-200">
               <div
                 className={`mx-auto lg:max-w-[75rem] 2xl:max-w-full transition-all duration-200 allsection ${
                   !open ? "lg:pl-65" : "lg:pl-15"

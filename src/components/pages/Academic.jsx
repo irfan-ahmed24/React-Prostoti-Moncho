@@ -4,14 +4,14 @@ import { NavLink } from "react-router-dom";
 export default function Academic() {
   return (
     <div className="p-5">
-      <h1 className="my-3 font-semibold">পড়াশোনা</h1>
-      <p className="h-[1px] w-full bg-black opacity-30"></p>
+      <h1 className="my-3 font-semibold dark:text-gray-300">পড়াশোনা</h1>
+      <p className="h-[1px] w-full bg-black dark:bg-gray-100 opacity-30"></p>
 
       <div className="mx-auto w-full md:w-[45rem] p-4">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-galada pt-5 sm:pt-10 text-center text-blue-700">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-galada pt-5 sm:pt-10 text-center text-blue-700 dark:text-blue-400">
           শিক্ষা, অনুপ্রেরণা ও সাফল্যের মঞ্চ!
         </h1>
-        <p className="text-md sm:text-lg md:text-xl text-center p-0 sm:p-2 mt-2 opacity-80">
+        <p className="text-md sm:text-lg md:text-xl text-center p-0 sm:p-2 mt-2 opacity-80 dark:text-white">
           আপনার অ্যাকাডেমিক বা শিক্ষাগত পাঠ খুঁজে পেতে হলে প্রথমে আপনাকে লগইন
           করতে হবে।
         </p>

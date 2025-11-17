@@ -4,11 +4,11 @@ import { NavLink } from "react-router-dom";
 export default function SignUp() {
   return (
     <div className="p-5">
-      <h1 className="my-3 font-semibold">সাইন আপ</h1>
-      <p className="h-[1px] w-full bg-black opacity-30"></p>
+      <h1 className="my-3 font-semibold dark:text-gray-300">সাইন আপ</h1>
+      <p className="h-[1px] w-full bg-black opacity-30 dark:bg-gray-100"></p>
       <div className="w-full py-7 flex justify-center">
-        <div className="bg-white p-8 w-full max-w-[43rem] rounded-3xl shadow-2xl">
-          <h1 className="text-2xl font-galada text-center text-blue-700">
+        <div className="bg-white dark:bg-[#021330] dark:text-gray-300 p-8 w-full max-w-[43rem] rounded-3xl shadow-2xl">
+          <h1 className="text-2xl font-galada text-center text-blue-700 dark:text-[#457cdb]">
             সাইন আপ করুন
           </h1>
           <form action="">
@@ -19,7 +19,7 @@ export default function SignUp() {
                 <input
                   type="text"
                   placeholder="আপনার নাম লিখুন"
-                  className="w-full border-emerald-300 border rounded-lg outline-none py-2 px-3"
+                  className="w-full dark:bg-[#0c2e69] border-emerald-300 border rounded-lg outline-none py-2 px-3"
                 />
               </div>
               <div>
@@ -28,7 +28,7 @@ export default function SignUp() {
                 <input
                   type="text"
                   placeholder="আপনার পদবি লিখুন"
-                  className="w-full border-emerald-300 border rounded-lg outline-none py-2 px-3"
+                  className="w-full dark:bg-[#0c2e69] border-emerald-300 border rounded-lg outline-none py-2 px-3"
                 />
               </div>
             </div>
@@ -40,7 +40,7 @@ export default function SignUp() {
                 <input
                   type="text"
                   placeholder="example@email.com"
-                  className="w-full border-emerald-300 border rounded-lg outline-none py-2 px-3"
+                  className="w-full dark:bg-[#0c2e69] border-emerald-300 border rounded-lg outline-none py-2 px-3"
                 />
               </div>
               <div>
@@ -49,7 +49,7 @@ export default function SignUp() {
                 <input
                   type="text"
                   placeholder="01XXXXXXXXX"
-                  className="w-full border-emerald-300 border rounded-lg outline-none py-2 px-3"
+                  className="w-full dark:bg-[#0c2e69] border-emerald-300 border rounded-lg outline-none py-2 px-3"
                 />
               </div>
             </div>
@@ -61,7 +61,7 @@ export default function SignUp() {
                 <input
                   type="text"
                   placeholder="আপনার নাম লিখুন"
-                  className="w-full border-emerald-300 border rounded-lg outline-none py-2 px-3"
+                  className="w-full dark:bg-[#0c2e69] border-emerald-300 border rounded-lg outline-none py-2 px-3"
                 />
               </div>
               <div>
@@ -108,7 +108,7 @@ export default function SignUp() {
               <input
                 type="text"
                 placeholder="আপনার নাম লিখুন"
-                className="w-full border-emerald-300 border rounded-lg outline-none py-2 px-3"
+                className="w-full dark:bg-[#0c2e69] border-emerald-300 border rounded-lg outline-none py-2 px-3"
               />
             </div>
 
@@ -119,7 +119,7 @@ export default function SignUp() {
                 <select
                   name="class"
                   id="class"
-                  className="w-full border-emerald-300 border rounded-lg outline-none py-2 px-3"
+                  className="w-full dark:bg-[#0c2e69] border-emerald-300 border rounded-lg outline-none py-2 px-3"
                 >
                   <option value="">ক্লাস নির্বাচন করুন</option>
                   <option value="6">6</option>
@@ -134,7 +134,7 @@ export default function SignUp() {
                 <br />
                 <input
                   type="file"
-                  className="w-full border-emerald-300 border rounded-lg outline-none py-2 px-3"
+                  className="w-full dark:bg-[#0c2e69] border-emerald-300 border rounded-lg outline-none py-2 px-3"
                 />
               </div>
             </div>
@@ -146,7 +146,7 @@ export default function SignUp() {
                 <input
                   type="text"
                   placeholder="পাসওয়ার্ড লিখুন"
-                  className="w-full border-emerald-300 border rounded-lg outline-none py-2 px-3"
+                  className="w-full dark:bg-[#0c2e69] border-emerald-300 border rounded-lg outline-none py-2 px-3"
                 />
               </div>
               <div>
@@ -155,7 +155,7 @@ export default function SignUp() {
                 <input
                   type="text"
                   placeholder="পাসওয়ার্ড আবার লিখুন"
-                  className="w-full border-emerald-300 border rounded-lg outline-none py-2 px-3"
+                  className="w-full dark:bg-[#0c2e69] border-emerald-300 border rounded-lg outline-none py-2 px-3"
                 />
               </div>
             </div>

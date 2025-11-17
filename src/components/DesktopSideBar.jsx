@@ -33,11 +33,14 @@ export default function DesktopSideBar({ onIsClick }) {
             <span class="text-2xl text-red-700">প্র</span>
             <span class=" text-blue-700 text-xl">স্তুতি </span>
             <span class="text-xl text-red-500">ম</span>
-            <span className="text-md">ঞ্চ</span>
+            <span className="text-md dark:text-gray-300">ঞ্চ</span>
           </a>
         </h1>
         <div className="text-xl">
-          <div onClick={() => setisClicked(!isClicked)} className="p-2">
+          <div
+            onClick={() => setisClicked(!isClicked)}
+            className="p-2 dark:text-gray-300"
+          >
             {isClicked ? <FaAnglesRight /> : <FaAnglesLeft />}
           </div>
         </div>
@@ -50,7 +53,7 @@ export default function DesktopSideBar({ onIsClick }) {
             <NavLink
               to={"/"}
               className={
-                "w-full flex hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
+                "w-full flex dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
               }
             >
               <FaHome className="text-xl mr-2" /> ড্যাশবোর্ড
@@ -60,7 +63,7 @@ export default function DesktopSideBar({ onIsClick }) {
             <NavLink
               to={"/Academic"}
               className={
-                "w-full flex hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
+                "w-full flex dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
               }
             >
               <FaGraduationCap className="text-xl mr-2" /> পড়াশোনা
@@ -70,7 +73,7 @@ export default function DesktopSideBar({ onIsClick }) {
             <NavLink
               to={"/Exam"}
               className={
-                "w-full flex hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
+                "w-full flex dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
               }
             >
               <BsPencilSquare className="text-xl mr-2" /> পরীক্ষা
@@ -80,7 +83,7 @@ export default function DesktopSideBar({ onIsClick }) {
             <NavLink
               to={"/Practice"}
               className={
-                "w-full flex hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
+                "w-full flex dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
               }
             >
               <GrTest className="text-xl mr-2" /> দ্রুত প্র্যাকটিস
@@ -90,7 +93,7 @@ export default function DesktopSideBar({ onIsClick }) {
             <NavLink
               to={"/SignUp"}
               className={
-                "w-full flex hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
+                "w-full flex dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
               }
             >
               <HiUserAdd className="text-xl mr-2" /> সাইন আপ
@@ -100,7 +103,7 @@ export default function DesktopSideBar({ onIsClick }) {
             <NavLink
               to={"/Login"}
               className={
-                "w-full flex hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
+                "w-full flex dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
               }
             >
               <PiSignInFill className="text-xl mr-2" /> সাইন ইন
@@ -126,7 +129,7 @@ export default function DesktopSideBar({ onIsClick }) {
             <NavLink
               to={"/"}
               className={
-                "flex items-center justify-center mx-2 px-4 py-2 hover:bg-gray-200 rounded-xl text-[14px] transition-all duration-200 font-bold"
+                "flex dark:text-gray-300 dark:hover:bg-gray-700 items-center justify-center mx-2 px-4 py-2 hover:bg-gray-200 rounded-xl text-[14px] transition-all duration-200 font-bold"
               }
             >
               <FaHome className="text-xl" />
@@ -136,7 +139,7 @@ export default function DesktopSideBar({ onIsClick }) {
             <NavLink
               to={"/Academic"}
               className={
-                "flex items-center justify-center mx-2 p-2 hover:bg-gray-200 rounded-xl text-[14px] transition-all duration-200 font-bold"
+                "flex dark:text-gray-300 dark:hover:bg-gray-700 items-center justify-center mx-2 p-2 hover:bg-gray-200 rounded-xl text-[14px] transition-all duration-200 font-bold"
               }
             >
               <FaGraduationCap className="text-xl" />
@@ -146,7 +149,7 @@ export default function DesktopSideBar({ onIsClick }) {
             <NavLink
               to={"/Exam"}
               className={
-                "flex items-center justify-center mx-2 p-2 hover:bg-gray-200 rounded-xl text-[14px] transition-all duration-200 font-bold"
+                "flex dark:text-gray-300 dark:hover:bg-gray-700 items-center justify-center mx-2 p-2 hover:bg-gray-200 rounded-xl text-[14px] transition-all duration-200 font-bold"
               }
             >
               <BsPencilSquare className="text-xl" />
@@ -156,7 +159,7 @@ export default function DesktopSideBar({ onIsClick }) {
             <NavLink
               to={"/Practice"}
               className={
-                "flex items-center justify-center mx-2 p-2 hover:bg-gray-200 rounded-xl text-[14px] transition-all duration-200 font-bold"
+                "flex dark:text-gray-300 dark:hover:bg-gray-700 items-center justify-center mx-2 p-2 hover:bg-gray-200 rounded-xl text-[14px] transition-all duration-200 font-bold"
               }
             >
               <GrTest className="text-xl" />
@@ -166,7 +169,7 @@ export default function DesktopSideBar({ onIsClick }) {
             <NavLink
               to={"/SignUp"}
               className={
-                "flex items-center justify-center mx-2 p-2 hover:bg-gray-200 rounded-xl text-[14px] transition-all duration-200 font-bold"
+                "flex dark:text-gray-300 dark:hover:bg-gray-700 items-center justify-center mx-2 p-2 hover:bg-gray-200 rounded-xl text-[14px] transition-all duration-200 font-bold"
               }
             >
               <HiUserAdd className="text-xl" />
@@ -176,7 +179,7 @@ export default function DesktopSideBar({ onIsClick }) {
             <NavLink
               to={"/Login"}
               className={
-                "flex items-center justify-center mx-2 p-2 hover:bg-gray-200 rounded-xl text-[14px] transition-all duration-200 font-bold"
+                "flex dark:text-gray-300 dark:hover:bg-gray-700 items-center justify-center mx-2 p-2 hover:bg-gray-200 rounded-xl text-[14px] transition-all duration-200 font-bold"
               }
             >
               <PiSignInFill className="text-xl" />

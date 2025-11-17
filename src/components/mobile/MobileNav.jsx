@@ -10,9 +10,9 @@ function MobileNav() {
   return (
     <>
       <MobileSideBar open={isOpen} />
-      <div className="fixed flex shadow-md justify-between items-center py-3 z-30 px-5 top-0 bg-white w-full lg:hidden">
+      <div className="fixed flex shadow-md justify-between items-center py-3 z-30 px-5 top-0 bg-white dark:bg-[#1a3564] w-full lg:hidden">
         <div className="text-2xl" onClick={() => setIsOpen(!isOpen)}>
-          <IoMenu />
+          <IoMenu className="dark:text-gray-300 cursor-pointer" />
         </div>
         <div>
           <h1>
@@ -23,7 +23,7 @@ function MobileNav() {
               <span class="text-xl text-red-700">প্র</span>
               <span class=" text-blue-700 text-lg">স্তুতি </span>
               <span class="text-lg text-red-500">ম</span>
-              <span className="text-sm">ঞ্চ</span>
+              <span className="text-sm dark:text-gray-300">ঞ্চ</span>
             </a>
           </h1>
         </div>

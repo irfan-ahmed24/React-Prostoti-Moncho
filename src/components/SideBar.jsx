@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 
 //react icon import
@@ -8,8 +8,14 @@ import { GrTest } from "react-icons/gr";
 import { PiSignInFill } from "react-icons/pi";
 import { HiUserAdd } from "react-icons/hi";
 import { MdOutlineDarkMode } from "react-icons/md";
+import { DarkContext } from "../USE_CONTEXT_HOOkS/DarkContext";
 
 function SideBar({ open }) {
+  const { theme, setTheme } = useContext(DarkContext);
+  const isDark = theme === "dark" ? true : false;
+  const handleTheme = () => {
+    setTheme((theme) => (theme === "dark" ? "light" : "dark"));
+  };
   return (
     <div
       id="MobileSideBar"
@@ -17,13 +23,13 @@ function SideBar({ open }) {
         open ? "!translate-x-0" : ""
       }`}
     >
-      <div className="bg-white w-1/2 sm:w-2/5 md:w-1/3 h-screen shadow-lg">
+      <div className="bg-white dark:bg-[#041f4e] w-1/2 sm:w-2/5 md:w-1/3 h-screen shadow-lg">
         <div className="mx-1">
           <div className="w-full relative my-2">
             <NavLink
               to={"/"}
               className={
-                "w-full flex hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
+                "w-full flex dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
               }
             >
               <FaHome className="text-xl mr-2" /> ড্যাশবোর্ড
@@ -33,7 +39,7 @@ function SideBar({ open }) {
             <NavLink
               to={"/Academic"}
               className={
-                "w-full flex hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
+                "w-full flex dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
               }
             >
               <FaGraduationCap className="text-xl mr-2" /> পড়াশোনা
@@ -43,7 +49,7 @@ function SideBar({ open }) {
             <NavLink
               to={"/Exam"}
               className={
-                "w-full flex hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
+                "w-full flex dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
               }
             >
               <BsPencilSquare className="text-xl mr-2" /> পরীক্ষা
@@ -53,7 +59,7 @@ function SideBar({ open }) {
             <NavLink
               to={"/Practice"}
               className={
-                "w-full flex hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
+                "w-full flex dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
               }
             >
               <GrTest className="text-xl mr-2" /> দ্রুত প্র্যাকটিস
@@ -63,7 +69,7 @@ function SideBar({ open }) {
             <NavLink
               to={"/SignUp"}
               className={
-                "w-full flex hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
+                "w-full flex dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
               }
             >
               <HiUserAdd className="text-xl mr-2" /> সাইন আপ
@@ -73,7 +79,7 @@ function SideBar({ open }) {
             <NavLink
               to={"/Login"}
               className={
-                "w-full flex hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
+                "w-full flex dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
               }
             >
               <PiSignInFill className="text-xl mr-2" /> সাইন ইন
@@ -81,8 +87,15 @@ function SideBar({ open }) {
           </div>
 
           <div className="w-full relative my-2 pl-6">
-            <button className="bg-amber-50 border-2 border-blue-950 w-16 p-0.5 rounded-2xl shadow-md shadow-black">
-              <MdOutlineDarkMode className="bg-blue-950 p-0.5 text-2xl rounded-2xl text-white font-bold shadow shadow-white" />
+            <button
+              onClick={handleTheme}
+              className={`bg-amber-50 dark:bg-black border-2 border-blue-950 w-14 p-0.5 rounded-2xl shadow-md shadow-black`}
+            >
+              <MdOutlineDarkMode
+                className={`bg-blue-950 p-0.5 text-2xl rounded-2xl text-white font-bold shadow shadow-white transition-all duration-200 ${
+                  isDark ? "translate-x-full" : "translate-x-0"
+                }`}
+              />
             </button>
           </div>
         </div>
