@@ -2,12 +2,12 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 //import components
-import Home from "../components/pages/Home";
-import Login from "../components/pages/Login";
-import SignUp from "../components/pages/SignUp";
-import Academic from "../components/pages/Academic";
-import Exam from "../components/pages/Exam";
-import Practice from "../components/pages/Practice";
+import Home from "../components/pages/public/Home";
+import Login from "../components/pages/public/Login";
+import SignUp from "../components/pages/public/SignUp";
+import Academic from "../components/pages/public/Academic";
+import Exam from "../components/pages/public/Exam";
+import Practice from "../components/pages/public/Practice";
 
 function PageRoute() {
   return (
