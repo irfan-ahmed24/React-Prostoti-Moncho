@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+  const navigate = useNavigate();
   return (
     <div className="p-5">
       <h1 className="my-3 font-semibold dark:text-gray-300">সাইন ইন</h1>
@@ -10,7 +12,7 @@ export default function Login() {
           <h1 className="text-3xl font-bold text-center mb-6 dark:text-gray-300">
             লগইন করুন
           </h1>
-          <form action="">
+          <form action="" onSubmit={() => navigate("/protected/Index")}>
             <div className="mb-4">
               <label htmlFor="username">ইউজারনেম অথবা ইমেইল</label>
               <br />
@@ -31,7 +33,13 @@ export default function Login() {
                 className="w-full border dark:bg-[#052255] border-gray-500 py-2 px-3 rounded-lg focus:outline-blue-700"
               />
             </div>
-            <button className="text-md w-full sm:text-lg transition-all text-white opacity-70 font-semibold rounded-xl gradient-bg py-2 px-5 my-2">
+
+            <button
+              type="submit"
+              className={
+                "text-md cursor-pointer relative w-full sm:text-lg transition-all text-white opacity-70 font-semibold rounded-xl gradient-bg py-2 px-5 my-2"
+              }
+            >
               লগইন
             </button>
           </form>

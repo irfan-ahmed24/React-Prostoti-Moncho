@@ -8,6 +8,7 @@ import SignUp from "../components/pages/public/SignUp";
 import Academic from "../components/pages/public/Academic";
 import Exam from "../components/pages/public/Exam";
 import Practice from "../components/pages/public/Practice";
+import Index from "../components/pages/protected/Index";
 
 function PageRoute() {
   return (
@@ -19,6 +20,8 @@ function PageRoute() {
         <Route path="/Practice" element={<Practice />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/SignUp" element={<SignUp />} />
+        {/* Protected Route */}
+        <Route path="/protected/Index" element={<Index />} />
       </Routes>
     </div>
   );
