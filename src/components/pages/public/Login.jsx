@@ -12,7 +12,7 @@ export default function Login() {
           <h1 className="text-3xl font-bold text-center mb-6 dark:text-gray-300">
             লগইন করুন
           </h1>
-          <form action="" onSubmit={() => navigate("/protected/Index")}>
+          <form action="" onSubmit={() => navigate("/User/Index")}>
             <div className="mb-4">
               <label htmlFor="username">ইউজারনেম অথবা ইমেইল</label>
               <br />

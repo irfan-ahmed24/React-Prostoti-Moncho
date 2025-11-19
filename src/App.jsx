@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 //import component
 import PageRoute from "./Routes/PageRoute";
@@ -6,7 +6,12 @@ import MobileNav from "./components/mobile/MobileNav";
 import DesktopSideBar from "./components/DesktopSideBar";
 import { DarkContext } from "./USE_CONTEXT_HOOkS/DarkContext";
 
+//protected component
+import ProtectedDeskTopSideBar from "./components/ProtectedNavbar/ProtectedDeskTopSideBar";
+import ProtectedMobileNav from "./components/ProtectedNavbar/ProtectedMobileNav";
+
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const storedTheme = localStorage.getItem("isDark");
   const [theme, setTheme] = useState(storedTheme);
 
@@ -23,10 +28,15 @@ function App() {
     <>
       <DarkContext.Provider value={{ theme, setTheme }}>
         <div className={`${isDark ? "dark" : ""}`}>
-          <MobileNav />
+          {isLoggedIn ? <ProtectedMobileNav /> : <MobileNav />}
+
           <div>
             <nav>
-              <DesktopSideBar onIsClick={handleIsClick} />
+              {isLoggedIn ? (
+                <ProtectedDeskTopSideBar onIsClick={handleIsClick} />
+              ) : (
+                <DesktopSideBar onIsClick={handleIsClick} />
+              )}
             </nav>
             <main className="bg-slate-100 dark:bg-[#1c1c31] min-h-screen mt-10 lg:mt-0 transition-all duration-200">
               <div
