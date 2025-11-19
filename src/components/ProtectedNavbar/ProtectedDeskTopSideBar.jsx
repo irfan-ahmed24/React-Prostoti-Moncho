@@ -5,10 +5,12 @@ import { DarkContext } from "../../USE_CONTEXT_HOOkS/DarkContext";
 import { FaHome, FaGraduationCap } from "react-icons/fa";
 import { BsPencilSquare } from "react-icons/bs";
 import { GrTest } from "react-icons/gr";
-import { PiSignInFill } from "react-icons/pi";
-import { HiUserAdd } from "react-icons/hi";
+
 import { FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";
 import { MdOutlineDarkMode } from "react-icons/md";
+import { MdLeaderboard } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
+import { CiLogout } from "react-icons/ci";
 
 //component import
 export default function ProtectedDeskTopSideBar({ onIsClick }) {
@@ -45,7 +47,7 @@ export default function ProtectedDeskTopSideBar({ onIsClick }) {
           </div>
         </div>
       </div>
-      <p className="h-[1px] w-full bg-black opacity-30"></p>
+      <p className="h-[1px] w-full bg-white opacity-30"></p>
 
       <div className="flex justify-between">
         <div className="mx-1">
@@ -97,7 +99,7 @@ export default function ProtectedDeskTopSideBar({ onIsClick }) {
                 "w-full flex dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
               }
             >
-              <PiSignInFill className="text-xl mr-2" /> Leader Board
+              <MdLeaderboard className="text-xl mr-2" /> লিডারবোর্ড
             </NavLink>
           </div>
 
@@ -108,7 +110,7 @@ export default function ProtectedDeskTopSideBar({ onIsClick }) {
                 "w-full flex dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
               }
             >
-              <PiSignInFill className="text-xl mr-2" /> Profile
+              <CgProfile className="text-xl mr-2" /> প্রোফাইল
             </NavLink>
           </div>
 
@@ -119,7 +121,7 @@ export default function ProtectedDeskTopSideBar({ onIsClick }) {
                 "w-full flex dark:text-gray-300 dark:hover:bg-gray-700 hover:bg-gray-200 px-5 py-2 rounded-2xl text-[14px] transition-all duration-200 font-bold"
               }
             >
-              <PiSignInFill className="text-xl mr-2" /> sign Out
+              <CiLogout className="text-xl mr-2" /> লগ আউট
             </NavLink>
           </div>
 
@@ -160,7 +162,7 @@ export default function ProtectedDeskTopSideBar({ onIsClick }) {
           </div>
           <div className="w-full relative my-2">
             <NavLink
-              to={"/"}
+              to={"/User/Exam"}
               className={
                 "flex dark:text-gray-300 dark:hover:bg-gray-700 items-center justify-center mx-2 p-2 hover:bg-gray-200 rounded-xl text-[14px] transition-all duration-200 font-bold"
               }
@@ -170,7 +172,7 @@ export default function ProtectedDeskTopSideBar({ onIsClick }) {
           </div>
           <div className="w-full relative my-2">
             <NavLink
-              to={"/Practice"}
+              to={"/User/Practice"}
               className={
                 "flex dark:text-gray-300 dark:hover:bg-gray-700 items-center justify-center mx-2 p-2 hover:bg-gray-200 rounded-xl text-[14px] transition-all duration-200 font-bold"
               }
@@ -180,14 +182,26 @@ export default function ProtectedDeskTopSideBar({ onIsClick }) {
           </div>
           <div className="w-full relative my-2">
             <NavLink
-              to={"/SignUp"}
+              to={"/User/LeaderBoard"}
               className={
                 "flex dark:text-gray-300 dark:hover:bg-gray-700 items-center justify-center mx-2 p-2 hover:bg-gray-200 rounded-xl text-[14px] transition-all duration-200 font-bold"
               }
             >
-              <HiUserAdd className="text-xl" />
+              <MdLeaderboard className="text-xl" />
             </NavLink>
           </div>
+
+          <div className="w-full relative my-2">
+            <NavLink
+              to={"/User/Profile"}
+              className={
+                "flex dark:text-gray-300 dark:hover:bg-gray-700 items-center justify-center mx-2 p-2 hover:bg-gray-200 rounded-xl text-[14px] transition-all duration-200 font-bold"
+              }
+            >
+              <CgProfile className="text-xl" />
+            </NavLink>
+          </div>
+
           <div className="w-full relative my-2">
             <NavLink
               to={"/Login"}
@@ -195,7 +209,7 @@ export default function ProtectedDeskTopSideBar({ onIsClick }) {
                 "flex dark:text-gray-300 dark:hover:bg-gray-700 items-center justify-center mx-2 p-2 hover:bg-gray-200 rounded-xl text-[14px] transition-all duration-200 font-bold"
               }
             >
-              <PiSignInFill className="text-xl" />
+              <CiLogout className="text-xl" />
             </NavLink>
           </div>
         </div>
